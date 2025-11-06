@@ -1,0 +1,187 @@
+/* File: events.css (CẬP NHẬT GRID LAYOUT) */
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background: #f5f6fa;
+  color: #222;
+}
+
+/* ==== CSS CHUNG CHO NAVBAR VÀ FOOTER ==== */
+.navbar {
+  background: #20232a;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  color: #ff416c;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #20232a;
+  color: white;
+  font-size: 0.9rem;
+  margin-top: 50px;
+}
+/* ======================================= */
+
+/* ==== HEADER & BANNER ==== */
+.event-header {
+  text-align: center;
+  background: linear-gradient(90deg, #36d1dc, #5b86e5); /* Gradient Xanh */
+  color: white;
+  padding: 70px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.event-header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+/* ==== FILTER BAR cho Events ==== */
+.filter-bar-events {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 70px;
+  z-index: 5;
+}
+
+.search-box, .category {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  width: 200px;
+  transition: 0.3s;
+}
+
+.search-box:focus, .category:focus, .category:hover {
+  outline: none;
+  border-color: #5b86e5;
+  box-shadow: 0 0 5px rgba(91, 134, 229, 0.4);
+}
+
+/* ==== KHU VỰC BLOG (SỬ DỤNG CSS GRID MỚI) ==== */
+.blog-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 40px;
+  
+  /* Chức năng CSS Grid mới */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Chia thành 2 cột bằng nhau */
+  gap: 30px; /* Khoảng cách giữa các bài viết */
+}
+
+.blog-post {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* HIỆU ỨNG XỊN */
+.blog-post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.blog-post img {
+  width: 100%;
+  height: 250px; /* Giảm chiều cao ảnh để phù hợp với 2 cột */
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.blog-post:hover img {
+    transform: scale(1.03);
+}
+
+.content {
+  padding: 25px;
+  flex-grow: 1; /* Đảm bảo nội dung có chiều cao bằng nhau */
+}
+
+.content h2 {
+    color: #5b86e5;
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 15px;
+  color: white;
+  background: #5b86e5;
+  padding: 8px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.read-more:hover {
+  background: #36d1dc;
+  transform: translateX(5px);
+}
+
+/* Responsive cho di động */
+@media (max-width: 992px) {
+    .blog-container {
+        /* Chuyển sang 1 cột trên màn hình nhỏ */
+        grid-template-columns: 1fr; 
+        padding: 0 20px;
+    }
+}
+@media (max-width: 768px) {
+    .blog-post img {
+        height: 200px;
+    }
+    .event-header h1 {
+        font-size: 2rem;
+    }
+    .filter-bar-events {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .search-box, .category {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}

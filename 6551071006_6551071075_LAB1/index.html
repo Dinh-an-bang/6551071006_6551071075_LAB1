@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="vi" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-key="home_title">Trang Chủ | Shop linh kiện điện tử Thiện Dương</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="..\Styles\style.css">
+</head>
+
+<body>
+    <header class="navbar navbar-expand-lg sticky-top bg-body-tertiary shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-part-reader me-2"></i>Thiện Dương Gear<sup>&copy;</sup>
+            </a>
+
+            <div class="d-flex align-items-center">
+                <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav mx-auto">
+                    <a class="nav-link" href="index.html" role="button" data-key="nav_parts">Trang chủ</a>
+
+                    <a class="nav-link" href="collection.html" role="button" data-key="nav_collections">Sản Phẩm</a>
+
+
+                    <a class="nav-link" href="events.html" role="button" data-key="nav_news">Tin tức & Sự kiện</a>
+
+                    <a class="nav-link" href="contact.html" role="button" data-key="nav_about">Liên Lạc</a>
+
+                </ul>
+
+                <div class="d-none d-lg-flex align-items-center">
+
+                    <div class="dropdown-container">
+                        <button class="menu-toggle-button user-icon-btn" onclick="toggleMenu()">
+                            <i class="fas fa-user-circle"></i>
+                        </button>
+                        <div class="dropdown-menu" id="userDropdown">
+                            <a href="#" class="menu-header-icon">
+                                <i class="fas fa-user-circle fa-4x"></i>
+                            </a>
+                            <div class="menu-title">Người dùng</div>
+                            <a href="#" class="menu-item" data-key="profile">Hồ sơ của tôi</a>
+                            <a href="#" class="menu-item" data-key="parts">Giỏ hàng</a>
+                            <a href="#" class="menu-item" data-key="settings">Cài đặt</a>
+                            <button class="menu-item log-out-btn" onclick="logout()" data-key="logout">Đăng
+                                xuất</button>
+                        </div>
+                    </div>
+
+                    <div class="vr mx-3"></div>
+
+                    <div class="btn-group btn-group-sm me-2" role="group">
+                        <button type="button" class="btn btn-outline-secondary lang-btn" data-lang="vi">VI</button>
+                        <button type="button" class="btn btn-outline-secondary lang-btn" data-lang="en">EN</button>
+                    </div>
+
+                    <button class="btn" id="theme-switcher-btn">
+                        <i class="fas fa-moon" id="theme-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="fullpage">
+
+        <div class="section fp-auto-height" id="section1">
+            <main>
+                <section class="hero-section">
+                    <div class="container pt-3 pb-4">
+                        <div class="row py-lg-5 justify-content-center">
+                            <div class="col-lg-8 col-md-10 text-center">
+
+                                <h1 class="fw-light">
+                                    <span class="d-lg-none fw-bold" data-key="hero_title_mobile">Chào mừng</span>
+                                    <span class="d-none d-lg-inline fw-bold" data-key="hero_title_desktop">Chào mừng đến
+                                        với Thiện Dương Gear Shop linh kiện điện tử </span>
+                                </h1>
+                                <p class="lead" data-key="hero_description">Khám phá vô vàn các linh kiện và thiết bị
+                                    xịn xò</p>
+
+                                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mt-4">
+                                    <a id="all-parts-hero-btn" href="#"
+                                        class="btn btn-outline-primary btn-lg px-4 gap-3" data-key="all_parts_btn">Xem
+                                        Tất Cả Linh Kiện</a>
+                                </div>
+
+                                <div class="input-group mt-4 shadow-lg mx-auto" style="max-width: 700px;">
+                                    <input type="text" class="form-control form-control-lg"
+                                        data-key-placeholder="search_placeholder"
+                                        placeholder="Nhập tên linh kiện, thiết bị...">
+                                    <button class="btn btn-primary" type="button">
+                                        <i class="fas fa-search me-1"></i> <span data-key="search_btn">Tìm Kiếm</span>
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <div class="container-fluid">
+                <div class="part-carousel-wrapper">
+                    <div class="part-carousel" id="part-carousel">
+                        <div class="part-card">
+                            <img src="/Images/product-1.jpg" alt="Bìa sách">
+                            <div class="part-category">
+                                <a href="#" class="category-tag">Màn hình</a>
+                            </div>
+                            <div class="part-info">
+                                <h5 class="part-title">Màn hình MSI PRO MP243L E14 24" IPS 144Hz</h5>
+                            </div>
+                        </div>
+                        <div class="part-card">
+                            <img src="/Images/product-2.jpg" alt="Bìa sách">
+                            <div class="part-category">
+                                <a href="#" class="category-tag">Chuột</a>
+                            </div>
+                            <div class="part-info">
+                                <h5 class="part-title">Chuột ASUS ROG Strix Impact III Wireless</h5>
+                            </div>
+                        </div>
+                        <div class="part-card">
+                            <img src="/Images/product-3.jpg" alt="Bìa sách">
+                            <div class="part-category">
+                                <a href="#" class="category-tag">Bàn phím</a>
+                            </div>
+                            <div class="part-info">
+                                <h5 class="part-title">Bàn phím AULA M75 TM (Cam/ Crescent switch) M7501</h5>
+                            </div>
+                        </div>
+                        <div class="part-card">
+                            <img src="/Images/product-4.jpg" alt="Bìa sách">
+                            <div class="part-category">
+                                <a href="#" class="category-tag">Dây USB</a>
+                            </div>
+                            <div class="part-info">
+                                <h5 class="part-title">Dây Cáp Mazer Infinite.LINK 3 Pro Cable USB-C TO USB-C 1.25m 100W
+                                    M-PL3Pro-C2C125-BK</h5>
+                            </div>
+                        </div>
+                        <div class="part-card">
+                            <img src="/Images/product-5.jpg" alt="Bìa sách">
+                            <div class="part-category">
+                                <a href="#" class="category-tag">Tai nghe</a>
+                            </div>
+                            <div class="part-info">
+                                <h5 class="part-title">Tai nghe Logitech G733 LIGHTSPEED Wireless Black</h5>
+                            </div>
+                        </div>
+                        <div class="part-card">
+                            <img src="/Images/product-6.jpg" alt="Bìa sách">
+                            <div class="part-category">
+                                <a href="#" class="category-tag">Phụ kiện</a>
+                            </div>
+                            <div class="part-info">
+                                <h5 class="part-title">Củ Sạc Ugreen GaN 100W CD226 Wh 15336</h5>
+                            </div>
+                        </div>
+                        <div class="part-card">
+                            <img src="/Images/product-7.jpg" alt="Bìa sách">
+                            <div class="part-category">
+                                <a href="#" class="category-tag">PC</a>
+                            </div>
+                            <div class="part-info">
+                                <h5 class="part-title">PC GVN x MSI PROJECT ZERO WHITE (Intel i5-14400F/ VGA RTX 5060)
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="explore-section" class="container text-center mt-4">
+                <a href="collection.html" class="btn btn-outline-primary btn-lg px-5" data-key="explore_btn">Khám phá thêm các linh
+                    kiện/thiết bị</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Thiện Dương Gear— All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"></script>
+
+    <script src="Scripts/main.js"></script>
+</body>
+
+</html>

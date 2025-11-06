@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liên hệ với chúng tôi</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <link rel="stylesheet" href="..\Styles\contact.css">
+</head>
+
+<body>
+  <header class="navbar navbar-expand-lg sticky-top bg-body-tertiary shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">
+        <i class="fas fa-part-reader me-2"></i>Thiện Dương Gear<sup>&copy;</sup>
+      </a>
+
+      <div class="d-flex align-items-center">
+        <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+
+        <ul class="navbar-nav mx-auto">
+          <a class="nav-link" href="index.html" role="button" data-key="nav_parts">Trang chủ</a>
+
+          <a class="nav-link" href="collection.html" role="button" data-key="nav_collections">Sản Phẩm</a>
+
+
+          <a class="nav-link" href="events.html" role="button" data-key="nav_news">Tin tức & Sự kiện</a>
+
+          <a class="nav-link" href="contact.html" role="button" data-key="nav_about">Liên Lạc</a>
+
+        </ul>
+
+        <div class="d-none d-lg-flex align-items-center">
+
+          <div class="dropdown-container">
+            <button class="menu-toggle-button user-icon-btn" onclick="toggleMenu()">
+              <i class="fas fa-user-circle"></i>
+            </button>
+            <div class="dropdown-menu" id="userDropdown">
+              <a href="#" class="menu-header-icon">
+                <i class="fas fa-user-circle fa-4x"></i>
+              </a>
+              <div class="menu-title">Người dùng</div>
+              <a href="#" class="menu-item" data-key="profile">Hồ sơ của tôi</a>
+              <a href="#" class="menu-item" data-key="parts">Giỏ hàng</a>
+              <a href="#" class="menu-item" data-key="settings">Cài đặt</a>
+              <button class="menu-item log-out-btn" onclick="logout()" data-key="logout">Đăng
+                xuất</button>
+            </div>
+          </div>
+
+          <div class="vr mx-3"></div>
+
+          <div class="btn-group btn-group-sm me-2" role="group">
+            <button type="button" class="btn btn-outline-secondary lang-btn" data-lang="vi">VI</button>
+            <button type="button" class="btn btn-outline-secondary lang-btn" data-lang="en">EN</button>
+          </div>
+
+          <button class="btn" id="theme-switcher-btn">
+            <i class="fas fa-moon" id="theme-icon"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <header class="contact-header">
+    <h1>Chúng tôi luôn sẵn sàng hỗ trợ bạn</h1>
+    <p>Hãy chọn kênh liên hệ phù hợp hoặc điền vào mẫu bên dưới để được phản hồi nhanh nhất.</p>
+  </header>
+
+  <div class="contact-wrapper">
+
+    <div class="contact-details">
+      <h2>Thông tin liên hệ</h2>
+
+      <div class="detail-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <div>
+          <strong>Địa chỉ Văn phòng chính</strong>
+          <p>145 Lê Văn Việt, Quận 9, TP. Hồ Chí Minh</p>
+        </div>
+      </div>
+
+      <div class="detail-item">
+        <i class="fas fa-phone-alt"></i>
+        <div>
+          <strong>Điện thoại & Email</strong>
+          <p>Hotline: 0947 132 428</p>
+          <p>Email: dinhanbang@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="detail-item">
+        <i class="fas fa-clock"></i>
+        <div>
+          <strong>Giờ làm việc</strong>
+          <p>Thứ Hai - Thứ Sáu: 8h00 - 18h00</p>
+          <p>Thứ Bảy: 9h00 - 16h00</p>
+        </div>
+      </div>
+
+      <div class="social-links">
+        <h3>Theo dõi chúng tôi</h3>
+        <a href="https://www.facebook.com/" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/watch?v=a-B9gPDid-4&list=RDi0nd3NPJ4MI&index=16" class="social-icon"><i
+            class="fab fa-youtube"></i></a>
+      </div>
+
+    </div>
+
+    <form class="contact-form">
+      <h2>Gửi tin nhắn cho chúng tôi</h2>
+
+      <label for="name">Họ và tên</label>
+      <input type="text" id="name" placeholder="Nhập họ tên của bạn" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="example@gmail.com" required>
+
+      <label for="subject">Chủ đề (Option)</label>
+      <select id="subject" required>
+        <option value="">-- Chọn chủ đề --</option>
+        <option value="support">Hỗ trợ kỹ thuật / Bảo hành</option>
+        <option value="sales">Tư vấn mua hàng / Đặt hàng</option>
+        <option value="partnership">Hợp tác / Đối tác</option>
+        <option value="other">Khác</option>
+      </select>
+
+      <label for="message">Tin nhắn</label>
+      <textarea id="message" rows="5" placeholder="Nhập nội dung bạn muốn gửi..." required></textarea>
+
+      <div class="checkbox-group">
+        <input type="checkbox" id="newsletter">
+        <label for="newsletter" style="display: inline; font-weight: normal;">Đăng ký nhận bản tin công nghệ mới
+          nhất.</label>
+      </div>
+
+      <button type="submit">Gửi tin nhắn</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>© 2025 GearVN Store — All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"></script>
+
+  <script src="Scripts/main.js"></script>
+</body>
+
+</html>
