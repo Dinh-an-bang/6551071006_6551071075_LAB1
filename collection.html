@@ -1,19 +1,18 @@
-
 <!DOCTYPE html>
 <html lang="vi">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-width, initial-scale=1.0">
-  <title data-key="collection_page_title">Bộ Sưu Tập Sản Phẩm</title> 
+  <title data-key="collection_page_title">Bộ Sưu Tập Sản Phẩm</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.css">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <link rel="stylesheet" href="..\Styles\collection.css">
-  <link rel="stylesheet" href="..\Styles\style.css">
+  <link rel="stylesheet" href="../Styles/collection.css">
+  <link rel="stylesheet" href="../Styles/style.css">
 </head>
 
 <body>
@@ -24,10 +23,11 @@
       </a>
       <div class="d-flex align-items-center">
         <a href="cart.html" class="btn position-relative me-3">
-            <i class="fas fa-shopping-cart"></i>
-            <span class="cart-count badge rounded-pill bg-danger position-absolute top-0 start-100 translate-middle" style="display: none;">
-                0 
-            </span>
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count badge rounded-pill bg-danger position-absolute top-0 start-100 translate-middle"
+            style="display: none;">
+            0
+          </span>
         </a>
         <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
@@ -59,7 +59,7 @@
               </a>
               <div class="menu-title" data-key="user_menu_title">Người dùng</div>
               <a href="#" class="menu-item" data-key="profile">Hồ sơ của tôi</a>
-              <a href="cart.html" class="menu-item" data-key="parts">Giỏ hàng</a> 
+              <a href="cart.html" class="menu-item" data-key="parts">Giỏ hàng</a>
               <a href="#" class="menu-item" data-key="settings">Cài đặt</a>
               <button class="menu-item log-out-btn" onclick="logout()" data-key="logout">Đăng
                 xuất</button>
@@ -87,10 +87,11 @@
   </section>
 
   <div class="filter-bar">
-    <input type="text" id="searchInput" data-key-placeholder="search_product_placeholder" placeholder="🔍 Tìm kiếm sản phẩm..." class="search-box">
+    <input type="text" id="searchInput" data-key-placeholder="search_product_placeholder"
+      placeholder="🔍 Tìm kiếm sản phẩm..." class="search-box">
 
     <select id="categoryFilter" class="category">
-      <option value="all" data-key-option="filter_category_all">Danh mục: Tất cả</option> 
+      <option value="all" data-key-option="filter_category_all">Danh mục: Tất cả</option>
       <option value="laptop">Laptop</option>
       <option value="pc">PC Gaming</option>
       <option value="monitor">Màn hình</option>
@@ -121,14 +122,14 @@
 
   <section class="product-grid" id="productGrid">
     <div class="product-card" data-category="pc" data-brand="msi" data-price="3">
-      <img src="..\Images\hinh1.jpg" alt="PC Gaming">
+      <img src="../Images/hinh1.jpg" alt="PC Gaming">
       <h3>PC Gaming GVN Hero</h3>
       <p>Hiệu năng mạnh mẽ, thiết kế ấn tượng.</p>
       <div class="price">25.000.000đ</div>
       <button class="add-cart" data-key="add_to_cart_btn">🛒 Thêm vào giỏ</button>
     </div>
     <div class="product-card" data-category="laptop" data-brand="acer" data-price="4">
-      <img src="..\Images\hinh2.jpg" alt="Laptop Gaming">
+      <img src="../Images/hinh2.jpg" alt="Laptop Gaming">
       <h3>Laptop Acer Nitro 5</h3>
       <p>GPU RTX mạnh mẽ dành cho game thủ.</p>
       <div class="price">32.900.000đ</div>
@@ -136,7 +137,7 @@
     </div>
 
     <div class="product-card" data-category="monitor" data-brand="asus" data-price="2">
-      <img src="..\Images\hinh3.jpg" alt="Màn hình">
+      <img src="../Images/hinh3.jpg" alt="Màn hình">
       <h3>Màn Hình ASUS 240Hz</h3>
       <p>Trải nghiệm mượt mà, hình ảnh sắc nét.</p>
       <div class="price">7.990.000đ</div>
@@ -144,7 +145,7 @@
     </div>
 
     <div class="product-card" data-category="keyboard" data-brand="razer" data-price="1">
-      <img src="..\Images\hinh4.jpg" alt="Bàn phím cơ">
+      <img src="../Images/hinh4.jpg" alt="Bàn phím cơ">
       <h3>Bàn Phím Cơ Razer RGB</h3>
       <p>Phím cơ học, độ bền cao, LED rực rỡ.</p>
       <div class="price">2.690.000đ</div>
@@ -152,7 +153,7 @@
     </div>
 
     <div class="product-card" data-category="headphone" data-brand="logitech" data-price="1">
-      <img src="..\Images\hinh5.jpg" alt="Tai nghe">
+      <img src="../Images/hinh5.jpg" alt="Tai nghe">
       <h3>Tai Nghe Logitech G733</h3>
       <p>Âm thanh sống động, kết nối không dây.</p>
       <div class="price">3.290.000đ</div>
@@ -160,7 +161,7 @@
     </div>
 
     <div class="product-card" data-category="mouse" data-brand="razer" data-price="1">
-      <img src="..\Images\hinh6.jpg" alt="Chuột Gaming">
+      <img src="../Images/hinh6.jpg" alt="Chuột Gaming">
       <h3>Chuột Razer Viper Mini</h3>
       <p>Độ nhạy cao, siêu nhẹ, RGB cực đẹp.</p>
       <div class="price">1.290.000đ</div>
@@ -168,7 +169,7 @@
     </div>
 
     <div class="product-card" data-category="chair" data-brand="msi" data-price="2">
-      <img src="..\Images\hinh7.jpg" alt="Ghế Gaming">
+      <img src="../Images/hinh7.jpg" alt="Ghế Gaming">
       <h3>Ghế Gaming MSI MAG CH120</h3>
       <p>Thiết kế công thái học, da PU cao cấp.</p>
       <div class="price">6.990.000đ</div>
@@ -183,7 +184,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"></script>
 
-  <script src="Scripts/main.js"></script> 
+  <script src="Scripts/main.js"></script>
 </body>
 
 </html>
