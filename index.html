@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="vi" data-bs-theme="light">
 
@@ -22,13 +23,17 @@
             </a>
 
             <div class="d-flex align-items-center">
+                <a href="cart.html" class="btn position-relative me-3">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count badge rounded-pill bg-danger position-absolute top-0 start-100 translate-middle" style="display: none;">
+                        0 
+                    </span>
+                </a>
                 <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
-
             <div class="collapse navbar-collapse" id="navbarNav">
-
                 <ul class="navbar-nav mx-auto">
                     <a class="nav-link" href="index.html" role="button" data-key="nav_parts">Trang chủ</a>
 
@@ -40,9 +45,7 @@
                     <a class="nav-link" href="contact.html" role="button" data-key="nav_about">Liên Lạc</a>
 
                 </ul>
-
                 <div class="d-none d-lg-flex align-items-center">
-
                     <div class="dropdown-container">
                         <button class="menu-toggle-button user-icon-btn" onclick="toggleMenu()">
                             <i class="fas fa-user-circle"></i>
@@ -51,15 +54,13 @@
                             <a href="#" class="menu-header-icon">
                                 <i class="fas fa-user-circle fa-4x"></i>
                             </a>
-                            <div class="menu-title">Người dùng</div>
+                            <div class="menu-title" data-key="user_menu_title">Người dùng</div>
                             <a href="#" class="menu-item" data-key="profile">Hồ sơ của tôi</a>
-                            <a href="#" class="menu-item" data-key="parts">Giỏ hàng</a>
+                            <a href="cart.html" class="menu-item" data-key="parts">Giỏ hàng</a> 
                             <a href="#" class="menu-item" data-key="settings">Cài đặt</a>
-                            <button class="menu-item log-out-btn" onclick="logout()" data-key="logout">Đăng
-                                xuất</button>
+                            <button class="menu-item log-out-btn" onclick="logout()" data-key="logout">Đăng xuất</button>
                         </div>
                     </div>
-
                     <div class="vr mx-3"></div>
 
                     <div class="btn-group btn-group-sm me-2" role="group">
@@ -76,96 +77,82 @@
     </header>
 
     <div id="fullpage">
+        <section class="section hero-section">
+            <div class="container text-center">
+                <div class="d-block d-lg-none">
+                    <h1 class="hero-title" data-key="hero_title_mobile">Chào mừng</h1>
+                </div>
+                <div class="d-none d-lg-block">
+                    <h1 class="hero-title" data-key="hero_title_desktop">Chào mừng đến với Thiện Dương Gear Shop linh kiện điện tử </h1>
+                </div>
+                <p class="hero-description" data-key="hero_description">Khám phá vô vàn các linh kiện và thiết bị xịn xò</p>
+                <a href="collection.html" class="btn btn-primary btn-lg mt-4" data-key="all_parts_btn">Xem Tất Cả Linh Kiện</a>
+            </div>
+        </section>
 
-        <div class="section fp-auto-height" id="section1">
-            <main>
-                <section class="hero-section">
-                    <div class="container pt-3 pb-4">
-                        <div class="row py-lg-5 justify-content-center">
-                            <div class="col-lg-8 col-md-10 text-center">
+        <section class="section search-section d-flex align-items-center justify-content-center">
+            <div class="container text-center">
+                <div class="input-group search-box-container">
+                    <input type="text" class="form-control form-control-lg" data-key-placeholder="search_placeholder" placeholder="Nhập tên linh kiện, thiết bị...">
+                    <button class="btn btn-primary btn-lg" type="button" data-key="search_btn">Tìm Kiếm</button>
+                </div>
+            </div>
+        </section>
 
-                                <h1 class="fw-light">
-                                    <span class="d-lg-none fw-bold" data-key="hero_title_mobile">Chào mừng</span>
-                                    <span class="d-none d-lg-inline fw-bold" data-key="hero_title_desktop">Chào mừng đến
-                                        với Thiện Dương Gear Shop linh kiện điện tử </span>
-                                </h1>
-                                <p class="lead" data-key="hero_description">Khám phá vô vàn các linh kiện và thiết bị
-                                    xịn xò</p>
-
-                                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mt-4">
-                                    <a id="all-parts-hero-btn" href="#"
-                                        class="btn btn-outline-primary btn-lg px-4 gap-3" data-key="all_parts_btn">Xem
-                                        Tất Cả Linh Kiện</a>
-                                </div>
-
-                                <div class="input-group mt-4 shadow-lg mx-auto" style="max-width: 700px;">
-                                    <input type="text" class="form-control form-control-lg"
-                                        data-key-placeholder="search_placeholder"
-                                        placeholder="Nhập tên linh kiện, thiết bị...">
-                                    <button class="btn btn-primary" type="button">
-                                        <i class="fas fa-search me-1"></i> <span data-key="search_btn">Tìm Kiếm</span>
-                                    </button>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </main>
-
-            <div class="container-fluid">
+        <section class="section carousel-section">
+            <div class="container py-5">
+                <h2 class="text-center mb-4">Sản Phẩm Nổi Bật</h2>
                 <div class="part-carousel-wrapper">
-                    <div class="part-carousel" id="part-carousel">
+                    <div id="part-carousel" class="part-carousel">
                         <div class="part-card">
                             <img src="/Images/product-1.jpg" alt="Bìa sách">
                             <div class="part-category">
-                                <a href="#" class="category-tag">Màn hình</a>
+                                <a href="#" class="category-tag">Laptop</a>
                             </div>
                             <div class="part-info">
-                                <h5 class="part-title">Màn hình MSI PRO MP243L E14 24" IPS 144Hz</h5>
+                                <h5 class="part-title">Macbook Pro M3 2024 (8CPU/10GPU)</h5>
                             </div>
                         </div>
                         <div class="part-card">
                             <img src="/Images/product-2.jpg" alt="Bìa sách">
                             <div class="part-category">
-                                <a href="#" class="category-tag">Chuột</a>
+                                <a href="#" class="category-tag">Monitor</a>
                             </div>
                             <div class="part-info">
-                                <h5 class="part-title">Chuột ASUS ROG Strix Impact III Wireless</h5>
+                                <h5 class="part-title">Màn hình Dell Ultrasharp U2723QE 27" 4K</h5>
                             </div>
                         </div>
                         <div class="part-card">
                             <img src="/Images/product-3.jpg" alt="Bìa sách">
                             <div class="part-category">
-                                <a href="#" class="category-tag">Bàn phím</a>
+                                <a href="#" class="category-tag">Keyboard</a>
                             </div>
                             <div class="part-info">
-                                <h5 class="part-title">Bàn phím AULA M75 TM (Cam/ Crescent switch) M7501</h5>
+                                <h5 class="part-title">Bàn phím cơ Dareu A98 Pro</h5>
                             </div>
                         </div>
                         <div class="part-card">
                             <img src="/Images/product-4.jpg" alt="Bìa sách">
                             <div class="part-category">
-                                <a href="#" class="category-tag">Dây USB</a>
+                                <a href="#" class="category-tag">Mouse</a>
                             </div>
                             <div class="part-info">
-                                <h5 class="part-title">Dây Cáp Mazer Infinite.LINK 3 Pro Cable USB-C TO USB-C 1.25m 100W
-                                    M-PL3Pro-C2C125-BK</h5>
+                                <h5 class="part-title">Chuột Gaming Logitech G Pro X Superlight 2</h5>
                             </div>
                         </div>
                         <div class="part-card">
                             <img src="/Images/product-5.jpg" alt="Bìa sách">
                             <div class="part-category">
-                                <a href="#" class="category-tag">Tai nghe</a>
+                                <a href="#" class="category-tag">Headphone</a>
                             </div>
                             <div class="part-info">
-                                <h5 class="part-title">Tai nghe Logitech G733 LIGHTSPEED Wireless Black</h5>
+                                <h5 class="part-title">Tai nghe Sony WH-1000XM5</h5>
                             </div>
                         </div>
                         <div class="part-card">
                             <img src="/Images/product-6.jpg" alt="Bìa sách">
                             <div class="part-category">
-                                <a href="#" class="category-tag">Phụ kiện</a>
+                                <a href="#" class="category-tag">Gear</a>
                             </div>
                             <div class="part-info">
                                 <h5 class="part-title">Củ Sạc Ugreen GaN 100W CD226 Wh 15336</h5>
@@ -189,7 +176,7 @@
                 <a href="collection.html" class="btn btn-outline-primary btn-lg px-5" data-key="explore_btn">Khám phá thêm các linh
                     kiện/thiết bị</a>
             </div>
-        </div>
+        </section>
     </div>
 
     <footer>

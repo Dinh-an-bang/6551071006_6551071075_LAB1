@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="vi">
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bộ Sưu Tập Sản Phẩm</title>
+  <meta name="viewport" content="width=device-width, initial-width, initial-scale=1.0">
+  <title data-key="collection_page_title">Bộ Sưu Tập Sản Phẩm</title> 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.css">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -16,19 +17,22 @@
 </head>
 
 <body>
-  <!-- Thanh điều hướng -->
   <header class="navbar navbar-expand-lg sticky-top bg-body-tertiary shadow-sm">
     <div class="container">
       <a class="navbar-brand fw-bold" href="index.html">
         <i class="fas fa-part-reader me-2"></i>Thiện Dương Gear<sup>&copy;</sup>
       </a>
-
       <div class="d-flex align-items-center">
+        <a href="cart.html" class="btn position-relative me-3">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count badge rounded-pill bg-danger position-absolute top-0 start-100 translate-middle" style="display: none;">
+                0 
+            </span>
+        </a>
         <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
         </button>
       </div>
-
       <div class="collapse navbar-collapse" id="navbarNav">
 
         <ul class="navbar-nav mx-auto">
@@ -53,15 +57,14 @@
               <a href="#" class="menu-header-icon">
                 <i class="fas fa-user-circle fa-4x"></i>
               </a>
-              <div class="menu-title">Người dùng</div>
+              <div class="menu-title" data-key="user_menu_title">Người dùng</div>
               <a href="#" class="menu-item" data-key="profile">Hồ sơ của tôi</a>
-              <a href="#" class="menu-item" data-key="parts">Giỏ hàng</a>
+              <a href="cart.html" class="menu-item" data-key="parts">Giỏ hàng</a> 
               <a href="#" class="menu-item" data-key="settings">Cài đặt</a>
               <button class="menu-item log-out-btn" onclick="logout()" data-key="logout">Đăng
                 xuất</button>
             </div>
           </div>
-
           <div class="vr mx-3"></div>
 
           <div class="btn-group btn-group-sm me-2" role="group">
@@ -77,19 +80,17 @@
     </div>
   </header>
 
-  <!-- Banner quảng cáo -->
   <section class="hero">
-    <h1>Khám phá Bộ Sưu Tập Công Nghệ Mới Nhất</h1>
-    <p>Giảm giá lên đến <strong>30%</strong> cho các dòng sản phẩm cao cấp!</p>
-    <a href="#" class="btn-main">Mua Ngay</a>
+    <h1 data-key="collection_hero_title">Khám phá Bộ Sưu Tập Công Nghệ Mới Nhất</h1>
+    <p data-key="collection_hero_subtitle">Giảm giá lên đến <strong>30%</strong> cho các dòng sản phẩm cao cấp!</p>
+    <a href="#" class="btn-main" data-key="collection_buy_now">Mua Ngay</a>
   </section>
 
-  <!-- Bộ lọc nâng cao -->
   <div class="filter-bar">
-    <input type="text" id="searchInput" placeholder="🔍 Tìm kiếm sản phẩm..." class="search-box">
+    <input type="text" id="searchInput" data-key-placeholder="search_product_placeholder" placeholder="🔍 Tìm kiếm sản phẩm..." class="search-box">
 
     <select id="categoryFilter" class="category">
-      <option value="all">Danh mục: Tất cả</option>
+      <option value="all" data-key-option="filter_category_all">Danh mục: Tất cả</option> 
       <option value="laptop">Laptop</option>
       <option value="pc">PC Gaming</option>
       <option value="monitor">Màn hình</option>
@@ -101,7 +102,7 @@
     </select>
 
     <select id="brandFilter" class="category">
-      <option value="all">Hãng: Tất cả</option>
+      <option value="all" data-key-option="filter_brand_all">Hãng: Tất cả</option>
       <option value="asus">ASUS</option>
       <option value="acer">Acer</option>
       <option value="msi">MSI</option>
@@ -110,7 +111,7 @@
     </select>
 
     <select id="priceFilter" class="category">
-      <option value="all">Giá: Tất cả</option>
+      <option value="all" data-key-option="filter_price_all">Giá: Tất cả</option>
       <option value="1">Dưới 5 triệu</option>
       <option value="2">5 - 15 triệu</option>
       <option value="3">15 - 30 triệu</option>
@@ -118,69 +119,60 @@
     </select>
   </div>
 
-  <!-- Danh sách sản phẩm -->
   <section class="product-grid" id="productGrid">
-    <!-- PC -->
     <div class="product-card" data-category="pc" data-brand="msi" data-price="3">
       <img src="..\Images\hinh1.jpg" alt="PC Gaming">
       <h3>PC Gaming GVN Hero</h3>
       <p>Hiệu năng mạnh mẽ, thiết kế ấn tượng.</p>
       <div class="price">25.000.000đ</div>
-      <button class="add-cart">🛒 Thêm vào giỏ</button>
+      <button class="add-cart" data-key="add_to_cart_btn">🛒 Thêm vào giỏ</button>
     </div>
-
-    <!-- Laptop -->
     <div class="product-card" data-category="laptop" data-brand="acer" data-price="4">
       <img src="..\Images\hinh2.jpg" alt="Laptop Gaming">
       <h3>Laptop Acer Nitro 5</h3>
       <p>GPU RTX mạnh mẽ dành cho game thủ.</p>
       <div class="price">32.900.000đ</div>
-      <button class="add-cart">🛒 Thêm vào giỏ</button>
+      <button class="add-cart" data-key="add_to_cart_btn">🛒 Thêm vào giỏ</button>
     </div>
 
-    <!-- Màn hình -->
     <div class="product-card" data-category="monitor" data-brand="asus" data-price="2">
       <img src="..\Images\hinh3.jpg" alt="Màn hình">
       <h3>Màn Hình ASUS 240Hz</h3>
       <p>Trải nghiệm mượt mà, hình ảnh sắc nét.</p>
       <div class="price">7.990.000đ</div>
-      <button class="add-cart">🛒 Thêm vào giỏ</button>
+      <button class="add-cart" data-key="add_to_cart_btn">🛒 Thêm vào giỏ</button>
     </div>
 
-    <!-- Bàn phím -->
     <div class="product-card" data-category="keyboard" data-brand="razer" data-price="1">
       <img src="..\Images\hinh4.jpg" alt="Bàn phím cơ">
       <h3>Bàn Phím Cơ Razer RGB</h3>
       <p>Phím cơ học, độ bền cao, LED rực rỡ.</p>
       <div class="price">2.690.000đ</div>
-      <button class="add-cart">🛒 Thêm vào giỏ</button>
+      <button class="add-cart" data-key="add_to_cart_btn">🛒 Thêm vào giỏ</button>
     </div>
 
-    <!-- Tai nghe -->
     <div class="product-card" data-category="headphone" data-brand="logitech" data-price="1">
       <img src="..\Images\hinh5.jpg" alt="Tai nghe">
       <h3>Tai Nghe Logitech G733</h3>
       <p>Âm thanh sống động, kết nối không dây.</p>
       <div class="price">3.290.000đ</div>
-      <button class="add-cart">🛒 Thêm vào giỏ</button>
+      <button class="add-cart" data-key="add_to_cart_btn">🛒 Thêm vào giỏ</button>
     </div>
 
-    <!-- Chuột -->
     <div class="product-card" data-category="mouse" data-brand="razer" data-price="1">
       <img src="..\Images\hinh6.jpg" alt="Chuột Gaming">
       <h3>Chuột Razer Viper Mini</h3>
       <p>Độ nhạy cao, siêu nhẹ, RGB cực đẹp.</p>
       <div class="price">1.290.000đ</div>
-      <button class="add-cart">🛒 Thêm vào giỏ</button>
+      <button class="add-cart" data-key="add_to_cart_btn">🛒 Thêm vào giỏ</button>
     </div>
 
-    <!-- Ghế -->
     <div class="product-card" data-category="chair" data-brand="msi" data-price="2">
       <img src="..\Images\hinh7.jpg" alt="Ghế Gaming">
       <h3>Ghế Gaming MSI MAG CH120</h3>
       <p>Thiết kế công thái học, da PU cao cấp.</p>
       <div class="price">6.990.000đ</div>
-      <button class="add-cart">🛒 Thêm vào giỏ</button>
+      <button class="add-cart" data-key="add_to_cart_btn">🛒 Thêm vào giỏ</button>
     </div>
   </section>
 
@@ -188,50 +180,10 @@
     <p>© 2025 GearVN Store — All rights reserved.</p>
   </footer>
 
-  <script>
-    // Hiệu ứng nút thêm giỏ hàng
-    const buttons = document.querySelectorAll('.add-cart');
-    buttons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        btn.innerText = '✅ Đã thêm';
-        btn.style.background = '#4caf50';
-        setTimeout(() => {
-          btn.innerText = '🛒 Thêm vào giỏ';
-          btn.style.background = '';
-        }, 1500);
-      });
-    });
-
-    // Lọc sản phẩm
-    const category = document.getElementById('categoryFilter');
-    const brand = document.getElementById('brandFilter');
-    const price = document.getElementById('priceFilter');
-    const search = document.getElementById('searchInput');
-    const products = document.querySelectorAll('.product-card');
-
-    function filterProducts() {
-      const c = category.value;
-      const b = brand.value;
-      const p = price.value;
-      const s = search.value.toLowerCase();
-
-      products.forEach(item => {
-        const matchCategory = c === 'all' || item.dataset.category === c;
-        const matchBrand = b === 'all' || item.dataset.brand === b;
-        const matchPrice = p === 'all' || item.dataset.price === p;
-        const matchSearch = item.querySelector('h3').innerText.toLowerCase().includes(s);
-
-        item.style.display = (matchCategory && matchBrand && matchPrice && matchSearch) ? "block" : "none";
-      });
-    }
-
-    [category, brand, price, search].forEach(el => el.addEventListener('input', filterProducts));
-  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"></script>
 
-  <script src="..\js\main.js"></script>
+  <script src="Scripts/main.js"></script> 
 </body>
 
 </html>

@@ -1,0 +1,33 @@
+/* Styles/cart.css */
+
+/* Giúp phần tóm tắt đơn hàng luôn hiển thị khi cuộn */
+.cart-summary {
+    background-color: var(--bs-body-bg); /* Dùng biến theme */
+    top: 100px; /* Khoảng cách với header */
+}
+
+/* Định kiểu cho từng sản phẩm trong giỏ */
+.cart-item {
+    transition: all 0.3s ease;
+    border: 1px solid var(--bs-border-color) !important;
+}
+
+.cart-item img {
+    width: 100px; 
+    height: 100px; 
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* Ẩn chi tiết trên mobile để giao diện gọn hơn */
+.cart-item .text-end {
+    white-space: nowrap; /* Ngăn giá trị bị xuống dòng */
+}
+
+/* Thiết lập responsive cho layout */
+@media (max-width: 991.98px) {
+    /* Trên mobile, bỏ sticky và căn giữa nếu cần */
+    .cart-summary {
+        margin-top: 2rem;
+    }
+}

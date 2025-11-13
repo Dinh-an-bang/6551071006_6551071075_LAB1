@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="vi">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Liên hệ với chúng tôi</title>
+  <title data-key="contact_page_title">Liên hệ với chúng tôi</title> 
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.css">
 
@@ -23,11 +24,16 @@
       </a>
 
       <div class="d-flex align-items-center">
+        <a href="cart.html" class="btn position-relative me-3">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count badge rounded-pill bg-danger position-absolute top-0 start-100 translate-middle" style="display: none;">
+                0 
+            </span>
+        </a>
         <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
         </button>
       </div>
-
       <div class="collapse navbar-collapse" id="navbarNav">
 
         <ul class="navbar-nav mx-auto">
@@ -52,15 +58,14 @@
               <a href="#" class="menu-header-icon">
                 <i class="fas fa-user-circle fa-4x"></i>
               </a>
-              <div class="menu-title">Người dùng</div>
+              <div class="menu-title" data-key="user_menu_title">Người dùng</div>
               <a href="#" class="menu-item" data-key="profile">Hồ sơ của tôi</a>
-              <a href="#" class="menu-item" data-key="parts">Giỏ hàng</a>
+              <a href="cart.html" class="menu-item" data-key="parts">Giỏ hàng</a> 
               <a href="#" class="menu-item" data-key="settings">Cài đặt</a>
               <button class="menu-item log-out-btn" onclick="logout()" data-key="logout">Đăng
                 xuất</button>
             </div>
           </div>
-
           <div class="vr mx-3"></div>
 
           <div class="btn-group btn-group-sm me-2" role="group">
@@ -76,80 +81,72 @@
     </div>
   </header>
 
-  <header class="contact-header">
-    <h1>Chúng tôi luôn sẵn sàng hỗ trợ bạn</h1>
-    <p>Hãy chọn kênh liên hệ phù hợp hoặc điền vào mẫu bên dưới để được phản hồi nhanh nhất.</p>
-  </header>
+  <div class="contact-container">
+    <div class="map-section">
+      <h1 data-key="contact_title">Chúng tôi luôn sẵn sàng hỗ trợ bạn</h1>
+      <p data-key="contact_subtitle">Hãy chọn kênh liên hệ phù hợp hoặc điền vào mẫu bên dưới để được phản hồi nhanh nhất.</p>
 
-  <div class="contact-wrapper">
-
-    <div class="contact-details">
-      <h2>Thông tin liên hệ</h2>
-
-      <div class="detail-item">
-        <i class="fas fa-map-marker-alt"></i>
-        <div>
-          <strong>Địa chỉ Văn phòng chính</strong>
-          <p>145 Lê Văn Việt, Quận 9, TP. Hồ Chí Minh</p>
+      <div class="contact-details">
+        <h2 data-key="contact_details_heading">Thông tin liên hệ</h2>
+        <div class="detail-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <h3 data-key="contact_address_title">Địa chỉ Văn phòng chính</h3>
+            <p>123 Công Nghệ, Phường Sáng Tạo, Quận Lập Trình, TP. Hồ Chí Minh</p>
+          </div>
+        </div>
+        <div class="detail-item">
+          <i class="fas fa-phone-alt"></i>
+          <div>
+            <h3 data-key="contact_phone_email_title">Điện thoại & Email</h3>
+            <p>(+84) 901 234 567 | support@thienduonggear.com</p>
+          </div>
+        </div>
+        <div class="detail-item">
+          <i class="fas fa-clock"></i>
+          <div>
+            <h3 data-key="contact_hours_title">Giờ làm việc</h3>
+            <p>Thứ Hai - Thứ Sáu: 8:00 - 17:30</p>
+          </div>
         </div>
       </div>
 
-      <div class="detail-item">
-        <i class="fas fa-phone-alt"></i>
-        <div>
-          <strong>Điện thoại & Email</strong>
-          <p>Hotline: 0947 132 428</p>
-          <p>Email: dinhanbang@gmail.com</p>
-        </div>
+      <div class="social-media">
+        <h2 data-key="contact_social_title">Theo dõi chúng tôi</h2>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
       </div>
-
-      <div class="detail-item">
-        <i class="fas fa-clock"></i>
-        <div>
-          <strong>Giờ làm việc</strong>
-          <p>Thứ Hai - Thứ Sáu: 8h00 - 18h00</p>
-          <p>Thứ Bảy: 9h00 - 16h00</p>
-        </div>
-      </div>
-
-      <div class="social-links">
-        <h3>Theo dõi chúng tôi</h3>
-        <a href="https://www.facebook.com/" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/" class="social-icon"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.youtube.com/watch?v=a-B9gPDid-4&list=RDi0nd3NPJ4MI&index=16" class="social-icon"><i
-            class="fab fa-youtube"></i></a>
-      </div>
-
     </div>
 
     <form class="contact-form">
-      <h2>Gửi tin nhắn cho chúng tôi</h2>
-
-      <label for="name">Họ và tên</label>
-      <input type="text" id="name" placeholder="Nhập họ tên của bạn" required>
+      <h2 data-key="contact_form_heading">Gửi tin nhắn cho chúng tôi</h2>
+      <label for="name" data-key="form_name_label">Họ và tên</label>
+      <input type="text" id="name" data-key-placeholder="form_name_placeholder" placeholder="Nhập họ tên của bạn" required>
 
       <label for="email">Email</label>
-      <input type="email" id="email" placeholder="example@gmail.com" required>
+      <input type="email" id="email" placeholder="Nhập email của bạn" required>
 
-      <label for="subject">Chủ đề (Option)</label>
+      <label for="subject" data-key="form_subject_label">Chủ đề (Tùy chọn)</label>
       <select id="subject" required>
-        <option value="">-- Chọn chủ đề --</option>
-        <option value="support">Hỗ trợ kỹ thuật / Bảo hành</option>
-        <option value="sales">Tư vấn mua hàng / Đặt hàng</option>
-        <option value="partnership">Hợp tác / Đối tác</option>
-        <option value="other">Khác</option>
+        <option value="" data-key-option="form_subject_default">-- Chọn chủ đề --</option>
+        <option value="support" data-key-option="form_subject_support">Hỗ trợ kỹ thuật / Bảo hành</option>
+        <option value="sales" data-key-option="form_subject_sales">Tư vấn mua hàng / Đặt hàng</option>
+        <option value="partnership" data-key-option="form_subject_partnership">Hợp tác / Đối tác</option>
+        <option value="other" data-key-option="form_subject_other">Khác</option>
       </select>
 
-      <label for="message">Tin nhắn</label>
-      <textarea id="message" rows="5" placeholder="Nhập nội dung bạn muốn gửi..." required></textarea>
+      <label for="message" data-key="form_message_label">Tin nhắn</label>
+      <textarea id="message" rows="5" data-key-placeholder="form_message_placeholder" placeholder="Nhập nội dung bạn muốn gửi..." required></textarea>
 
       <div class="checkbox-group">
         <input type="checkbox" id="newsletter">
-        <label for="newsletter" style="display: inline; font-weight: normal;">Đăng ký nhận bản tin công nghệ mới
+        <label for="newsletter" style="display: inline; font-weight: normal;" data-key="form_newsletter_label">Đăng ký nhận bản tin công nghệ mới
           nhất.</label>
       </div>
 
-      <button type="submit">Gửi tin nhắn</button>
+      <button type="submit" data-key="form_submit_btn">Gửi tin nhắn</button>
     </form>
   </div>
 
@@ -158,9 +155,6 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"></script>
-
   <script src="Scripts/main.js"></script>
 </body>
 
