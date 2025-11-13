@@ -1,45 +1,3 @@
-body {
-  font-family: "Poppins", sans-serif;
-  margin: 0;
-  background: #f5f6fa;
-  color: #333;
-}
-
-/* ==== NAVBAR ==== */
-.navbar {
-  background: #20232a;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 50px;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
-.menu {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-}
-
-.menu a {
-  color: white;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.menu a:hover {
-  color: #ff416c;
-}
-
 /* ==== HERO ==== */
 .hero {
   text-align: center;
@@ -50,23 +8,6 @@ body {
 
 .hero h1 {
   font-size: 2rem;
-}
-
-.btn-main {
-  display: inline-block;
-  margin-top: 20px;
-  background: white;
-  color: #ff416c;
-  padding: 10px 25px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.btn-main:hover {
-  background: #20232a;
-  color: white;
 }
 
 /* ==== FILTER BAR ==== */
@@ -156,16 +97,6 @@ body {
 .add-cart:hover {
   background: #ff4b2b;
 }
-
-/* ==== FOOTER ==== */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #20232a;
-  color: white;
-  font-size: 0.9rem;
-}
-
 
 /* ==== BỔ SUNG ==== */
 .filter-bar {

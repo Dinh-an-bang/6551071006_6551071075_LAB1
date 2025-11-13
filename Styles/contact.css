@@ -1,170 +1,120 @@
-/* File: contact.css (NÂNG CẤP LAYOUT VÀ THIẾT KẾ MỚI) */
-
-body {
-  font-family: "Poppins", sans-serif;
-  margin: 0;
-  background: #f5f6fa;
+/* ==== CONTACT HEADER (Sử dụng biến theme) ==== */
+.contact-container {
+    padding-top: 56px; /* Khoảng cách với header fixed */
+    padding-bottom: 50px;
+    background-color: var(--body-bg);
+    color: var(--text-color);
 }
 
-/* ==== CSS CHUNG CHO NAVBAR VÀ FOOTER ==== */
-.navbar {
-  background: #20232a;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 50px;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+.map-section {
+    padding: 60px 40px 40px;
+    background-color: var(--component-bg);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
-.menu {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-}
-
-.menu a {
-  color: white;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.menu a:hover {
-  color: #ff416c;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #20232a;
-  color: white;
-  font-size: 0.9rem;
-  margin-top: 50px;
-}
-/* ======================================= */
-
-/* ==== CONTACT HEADER (Mới) ==== */
-.contact-header {
-    text-align: center;
-    padding: 60px 20px 40px;
-    background: #fff;
-    border-bottom: 1px solid #eee;
-    
-}
-
-.contact-header h1 {
+.contact-container h1 {
     font-size: 2.2rem;
-    color: #ff416c;
+    color: var(--primary-color);
     margin-bottom: 10px;
 }
-.contact-header p {
-    color: #666;
+.contact-container p {
+    color: var(--text-color);
     font-size: 1.1rem;
 }
 
 
-/* ==== CONTACT WRAPPER (LAYOUT CHÍNH: 2 CỘT DÙNG FLEXBOX) ==== */
-.contact-wrapper {
-  display: flex; 
-  max-width: 1200px;
-  margin: 50px auto;
-  padding: 0 40px;
-  gap: 40px;
-  /* Đảm bảo flex-wrap cho responsive */
-  flex-wrap: wrap; 
+/* ==== LAYOUT CHÍNH: 2 CỘT ==== */
+.contact-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 40px;
+    gap: 40px;
+    flex-wrap: wrap; 
 }
 
-/* Cột 1: Chi tiết thông tin (Nổi bật) */
-.contact-details {
+/* Cột 1: Thông tin (Map Section) */
+.map-section {
     flex: 1;
     min-width: 350px;
-    background: linear-gradient(135deg, #ff416c, #ff4b2b); /* Gradient Đỏ/Hồng nổi bật */
-    color: white;
     padding: 40px;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(255, 65, 108, 0.2);
+    background-color: var(--component-bg);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-.contact-details h2 {
-    font-size: 2rem;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.5); /* Đường kẻ dưới mờ */
+.contact-details h2, .social-media h2 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--border-color);
     padding-bottom: 15px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .detail-item {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    color: var(--text-color);
 }
 
 .detail-item i {
     font-size: 1.5rem;
     margin-right: 20px;
-    color: #fff;
+    color: var(--primary-color);
     padding-top: 5px;
 }
 
-.detail-item strong {
-    display: block;
+.detail-item h3 {
     font-size: 1.1rem;
-    margin-bottom: 5px;
+    margin: 0 0 5px 0;
 }
 
 .detail-item p {
     margin: 0;
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--text-color);
+    font-size: 1rem;
 }
 
 /* Liên kết xã hội */
-.social-links {
+.social-media {
     margin-top: 40px;
 }
 
-.social-links h3 {
-    margin-bottom: 15px;
-    font-size: 1.2rem;
-}
-
-.social-icon {
+.social-media a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
     width: 40px;
     height: 40px;
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
+    background: var(--component-bg);
+    color: var(--primary-color);
+    border: 1px solid var(--border-color);
     border-radius: 50%;
     margin-right: 10px;
     transition: background 0.3s, transform 0.3s;
 }
 
-.social-icon:hover {
-    background: rgba(255, 255, 255, 0.3);
+.social-media a:hover {
+    background: var(--primary-color);
+    color: var(--secondary-color);
     transform: translateY(-3px);
 }
 
 /* Cột 2: Form */
 .contact-form {
-  flex: 2; /* Chiếm nhiều diện tích hơn cột thông tin (tỉ lệ 2:1) */
+  flex: 2; 
   min-width: 400px;
   padding: 40px;
-  background: white;
+  background: var(--component-bg);
   border-radius: 20px;
   box-shadow: 0 5px 20px rgba(0,0,0,0.05);
 }
 
 .contact-form h2 {
     font-size: 1.8rem;
-    color: #333;
+    color: var(--primary-color);
     margin-top: 0;
     margin-bottom: 30px;
 }
@@ -173,50 +123,40 @@ footer {
   display: block;
   margin-top: 15px;
   font-weight: bold;
-  color: #555;
+  color: var(--primary-color);
 }
 
-/* Tối ưu hóa Input/Textarea/Select */
+/* Input/Textarea/Select */
 .contact-form input,
 .contact-form textarea,
 .contact-form select { 
   width: 100%;
   padding: 12px;
   border-radius: 8px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-color);
+  background-color: var(--body-bg);
+  color: var(--text-color);
   margin-top: 8px;
   font-size: 16px;
   transition: border-color 0.3s, box-shadow 0.3s;
   box-sizing: border-box;
 }
 
-/* HIỆU ỨNG FOCUS XỊN */
+/* HIỆU ỨNG FOCUS */
 .contact-form input:focus,
 .contact-form textarea:focus,
 .contact-form select:focus {
   outline: none;
-  border-color: #ff416c;
-  box-shadow: 0 0 8px rgba(255, 65, 108, 0.3);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Checkbox group */
-.checkbox-group {
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-}
-
-.checkbox-group input[type="checkbox"] {
-    width: auto;
-    margin-right: 10px;
-}
-
-/* Nút bấm */
-button {
+/* Nút bấm (dùng class Bootstrap) */
+.contact-form button[type="submit"] {
   margin-top: 30px;
   width: 100%;
-  background: linear-gradient(90deg, #ff4b2b, #ff416c);
-  color: white;
+  background: var(--primary-color);
+  color: var(--secondary-color);
   border: none;
   padding: 14px;
   font-size: 18px;
@@ -224,25 +164,49 @@ button {
   cursor: pointer;
   font-weight: bold;
   transition: 0.3s;
-  box-shadow: 0 4px 10px rgba(255, 65, 108, 0.4);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
-button:hover {
+.contact-form button[type="submit"]:hover {
   transform: translateY(-2px);
   opacity: 0.95;
-  box-shadow: 0 6px 15px rgba(255, 65, 108, 0.6);
+}
+
+/*check box đăng ký*/
+.checkbox-group {
+    margin-top: 20px;
+    /* Sử dụng Flexbox để căn chỉnh item theo chiều dọc */
+    display: flex; 
+    align-items: flex-start; /* Căn chỉnh các item theo đỉnh */
+    gap: 10px; /* Thêm khoảng cách giữa checkbox và label */
+}
+
+/* Tối ưu checkbox */
+.checkbox-group input[type="checkbox"] {
+    /* Đảm bảo input không bị co lại và căn giữa theo chiều dọc nếu dùng align-items: center */
+    flex-shrink: 0; 
+    margin-top: 5px; /* Điều chỉnh để căn ngang với chữ */
+    height: 16px; /* Giữ kích thước tiêu chuẩn */
+    width: 16px; 
+}
+
+/* Định kiểu cho label */
+.checkbox-group label {
+    font-weight: normal; /* Đảm bảo chữ không bị đậm như các label khác */
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 /* Responsive */
 @media (max-width: 1024px) {
-    .contact-wrapper {
-        /* Chuyển sang 1 cột trên màn hình nhỏ */
+    .contact-container {
         flex-direction: column;
         padding: 0 20px;
         gap: 30px;
     }
-    .contact-details, .contact-form {
+    .map-section, .contact-form {
         min-width: unset;
-        flex: 1 1 100%; /* Chiếm 100% chiều rộng */
+        flex: 1 1 100%;
+        padding: 25px;
     }
 }
